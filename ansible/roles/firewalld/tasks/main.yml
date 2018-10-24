@@ -15,4 +15,4 @@
 #- name: enable 8080/tcp port to public
 #  command: firewall-cmd --permanent --zone=public --add-port=8080/tcp
 #  notify: 
-- restart firewalld.service
+#- restart firewalld.service
