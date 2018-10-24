@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  sudo: yes
+  roles:
+  - tools
+  #- percona
+  - nginx
+  - php-fpm-55
+  - firewalld
+  
