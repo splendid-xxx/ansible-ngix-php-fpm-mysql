@@ -1,10 +1,13 @@
 ---
-- name: Install Epel repository
-  command: rpm -Uivh --replacepkgs {{epel_repository}}
+#- name: Install Epel repository
+#  command: rpm -Uivh --replacepkgs {{epel_repository}}
 
-- name: Install Remi repository
-  command: rpm -Uivh --replacepkgs {{remi_repository}}
+#- name: Install Remi repository
+#  command: rpm -Uivh --replacepkgs {{remi_repository}}
 
+- name: Add epel-release repo
+  yum: name=epel-release state=present
+    
 - name: Install libselinux-python
   yum: name=libselinux-python state=present
 
